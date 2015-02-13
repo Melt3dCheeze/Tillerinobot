@@ -14,21 +14,21 @@ public class Default implements Language {
 
 	@Override
 	public String unknownBeatmap() {
-		return "I'm sorry, I don't know that map. It might be very new, very hard, unranked or not standard osu mode.";
+		return "U weedwhacker drongo that map aint old enough yet ya rathead.";
 	}
 
 	@Override
 	public String internalException(String marker) {
-		return "Ugh... Looks like human Tillerino screwed up my wiring."
+		return "Looks like old m8 tillo got rekt, the pisshead."
 				+ " If he doesn't notice soon, could you [https://github.com/Tillerino/Tillerinobot/wiki/Contact inform him]? (reference "
 				+ marker + ")";
 	}
 
 	@Override
 	public String externalException(String marker) {
-		return "What's going on? I'm only getting nonsense from the osu server. Can you tell me what this is supposed to mean? 0011101001010000"
-				+ " Human Tillerino says that this is nothing to worry about, and that we should try again."
-				+ " If you're super worried for some reason, you can [https://github.com/Tillerino/Tillerinobot/wiki/Contact tell him] about it. (reference "
+		return "WHAT ARE YOU DOING FILTHY MONGREL PEPPY, FIX THE SERVERS"
+				+ " don't panic ya filthy gronk, go get ur goonsack mate. try again later"
+				+ " if ur running around like a headless chook, you can [https://github.com/Tillerino/Tillerinobot/wiki/Contact tell him] about it. (reference "
 				+ marker + ")";
 	}
 
@@ -42,19 +42,18 @@ public class Default implements Language {
 		if(inactiveTime < 60 * 1000) {
 			user.message("beep boop");
 		} else if(inactiveTime < 24 * 60 * 60 * 1000) {
-			user.message("Welcome back, " + apiUser.getUserName() + ".");
+			user.message("G'day mate, " + apiUser.getUserName() + ".");
 		} else if(inactiveTime > 7l * 24 * 60 * 60 * 1000) {
 			user.message(apiUser.getUserName() + "...");
-			user.message("...is that you? It's been so long!");
-			user.message("It's good to have you back. Can I interest you in a recommendation?");
+			user.message("it's been so long you bloody wanker");
+			user.message("your back? Good. Want me to fill ur eskie with a six pack of pp maps?");
 		} else {
 			String[] messages = {
-					"you look like you want a recommendation.",
-					"how nice to see you! :)",
-					"my favourite human. (Don't tell the other humans!)",
-					"what a pleasant surprise! ^.^",
-					"I was hoping you'd show up. All the other humans are lame, but don't tell them I said that! :3",
-					"what do you feel like doing today?",
+					"you want some recommendations to fix ur farming?.",
+					"nice to meet ya",
+					"ur my favourite cunt(don't tell the others)",
+					"that's fucking sick ayy cunt",
+					"been waitin for ya m8, all those other cunts are a bunch of soft cocks, tell them and ill bash ya fucken head but ay",
 			};
 			
 			Random random = new Random();
@@ -73,22 +72,22 @@ public class Default implements Language {
 
 	@Override
 	public String noInformationForMods() {
-		return "Sorry, I can't provide information for those mods at this time.";
+		return "oi cunt I cant provide shit to ya atm";
 	}
 
 	@Override
 	public String malformattedMods(String mods) {
-		return "Those mods don't look right. Mods can be any combination of DT HR HD HT EZ NC FL SO NF. Combine them without any spaces or special chars. Example: !with HDHR, !with DTEZ";
+		return "pick the right mods ya gronk. DT HR HD HT EZ NC FL SO NF. Combine them without any spaces or special chars. Example: !with HDHR, !with DTEZ";
 	}
 
 	@Override
 	public String noLastSongInfo() {
-		return "I don't remember you getting any song info...";
+		return "Song info? What the fuck mate";
 	}
 
 	@Override
 	public String tryWithMods() {
-		return "Try this map with some mods!";
+		return "Put some mods on ya yank";
 	}
 
 	@Override
@@ -108,29 +107,29 @@ public class Default implements Language {
 	 * @return
 	 */
 	public String unresolvableName(String exceptionMarker, String name) {
-		return "Your name is confusing me. Are you banned? If not, pls [https://github.com/Tillerino/Tillerinobot/wiki/Contact contact Tillerino]. (reference "
+		return "Where's ur name you spearchucker, you banned or some crap? If not >[https://github.com/Tillerino/Tillerinobot/wiki/Contact contact Tillerino]. (reference "
 				+ exceptionMarker + ")";
 	}
 
 	@Override
 	public String excuseForError() {
-		return "I'm sorry, there was this beautiful sequence of ones and zeros and I got distracted. What did you want again?";
+		return "sorry cunt had a goon bag on the clothesline, whatcha want again m8?";
 	}
 
 	@Override
 	public String complaint() {
-		return "Your complaint has been filed. Tillerino will look into it when he can.";
+		return "Thanks for ya complaint mate, now go farm some trash 10.3 maps";
 	}
 
 	@Override
 	public void hug(final IRCBotUser user, OsuApiUser apiUser) {
-		user.message("Come here, you!");
+		user.message("Come here ya wanker!");
 		user.action("hugs " + apiUser.getUserName());
 	}
 
 	@Override
 	public String help() {
-		return "Hi! I'm the robot who killed Tillerino and took over his account. Just kidding, but I do use the account a lot."
+		return "G'day mate, I'm the bloody dingo who ate your Tillerino Baby. Nah I'm messing with ya you mug"
 				+ " [https://twitter.com/Tillerinobot status and updates]"
 				+ " - [https://github.com/Tillerino/Tillerinobot/wiki commands]"
 				+ " - [http://ppaddict.tillerino.org/ ppaddict]"
@@ -154,13 +153,13 @@ public class Default implements Language {
 	
 	@Override
 	public String outOfRecommendations() {
-		return "I've recommended everything that I can think of."
-				+ " Try other recommendation options or use !reset. If you're not sure, check !help.";
+		return "You run me dry on bloody beatmaps you prick."
+				+ "Try other recommendation options or use !reset. If ur a downer, use !help";
 	}
 
 	@Override
 	public String notRanked() {
-		return "Looks like that beatmap is not ranked.";
+		return "This beatmap ain't ranked mate";
 	}
 
 	@Override
